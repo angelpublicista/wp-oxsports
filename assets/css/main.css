@@ -1,0 +1,133 @@
+.page-template-podcast-home #tm-main {
+  padding: 0;
+}
+.page-template-podcast-home #tm-main .uk-container {
+  max-width: 100%;
+  padding: 0;
+  background: white;
+}
+.page-template-podcast-home #tm-main .article-main {
+  padding: 2em 0;
+}
+
+.box-bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4em;
+  color: white;
+  min-height: 60vh !important;
+}
+.box-bg-image .intro-title {
+  color: white;
+  font-size: 5em;
+  margin: 0;
+}
+
+.breadcrumbs-podcast {
+  padding: 1.5em 2em;
+  background-color: #E9FDFF;
+}
+
+.podcast-section {
+  padding: 4em 0;
+}
+.podcast-section__title .text {
+  font-size: 3em;
+}
+.podcast-section__title .title-line {
+  border: 3px solid #58C9CD;
+  margin: 10px 0;
+}
+.podcast-section__title .title-line.first-line {
+  width: 70px;
+}
+.podcast-section__title .title-line.last-line {
+  width: 50px;
+}
+
+.slick-podcast {
+  margin: 2em 0;
+}
+.slick-podcast .slick-custom-arrow {
+  position: absolute;
+  bottom: -5em;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: #58C9CD;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 0px;
+}
+.slick-podcast .slick-custom-arrow.slick-custom-prev {
+  left: 0;
+}
+.slick-podcast .slick-custom-arrow.slick-custom-next {
+  left: 5em;
+}
+
+.ox-card {
+  margin: 0 0.5em;
+}
+.ox-card__body {
+  position: relative;
+  height: 300px;
+}
+.ox-card__body__image {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.ox-card__body__button-play {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.ox-card__body__button-play:hover {
+  transform: translateX(3px);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: #58C9CD;
+}
+.ox-card__body__date {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  z-index: 1;
+  color: #58C9CD;
+  background: white;
+  padding: 0.5em 1em;
+}
+.ox-card__caption {
+  margin-top: 1em;
+}
+.ox-card__caption__serie__link {
+  color: #959595;
+}
+.ox-card__caption__podcast-title {
+  transition: all 0.3s;
+  color: #4D4D4D;
+  font-size: 2em;
+}
+.ox-card__caption__podcast-link {
+  transition: all 0.3s;
+}
+.ox-card__caption__podcast-link:hover {
+  text-decoration: none;
+}
+.ox-card__caption__podcast-link:hover .ox-card__caption__podcast-title {
+  color: #58C9CD;
+}
+
+/*# sourceMappingURL=main.css.map */
