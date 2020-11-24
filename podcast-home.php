@@ -14,7 +14,13 @@ get_header();
 <article class="article-main">
     <div class="container">
         <div class="breadcrumbs-podcast">
-            <span>Inicio</span> / <span>Podcast</span>
+            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                <?php
+                if(function_exists('bcn_display'))
+                {
+                bcn_display();
+                }?>
+            </div>
         </div>
 
         <section class="podcast-section">
