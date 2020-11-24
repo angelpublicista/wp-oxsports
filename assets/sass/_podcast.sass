@@ -12,9 +12,10 @@
     background-size: cover
     background-position: center
     background-repeat: no-repeat
-    padding: 4em
     color: white
-    min-height: 60vh !important
+    &.podcast-home-intro
+        padding: 4em
+        min-height: 60vh !important
     .intro-title
         color: white
         font-size: 5em
@@ -111,3 +112,36 @@
                 text-decoration: none
                 .ox-card__caption__podcast-title
                     color: $primary-color
+// SOCIAL SECTION
+.social-section
+    text-align: center
+    padding: 4em 0
+    &__title
+        color: white
+        font-size: 3em
+        font-weight: bold
+        margin: 0
+    &__subtitle
+        margin: 0
+    &__buttons
+        margin-top: 2em
+        background-color: $primary-color
+        padding: 2em
+        &__list
+            list-style: none
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+            margin: 0
+            padding: 0
+            li
+                margin: 1em 2em
+            &__btn
+                color: white
+                transition: all .3s
+                &:hover
+                    text-decoration: none
+                i
+                    font-size: 4em
+            .name-social
+                display: block

@@ -51,6 +51,7 @@ if (!function_exists('ox_carousel_podcast_func')) {
                 <?php endwhile; ?>
             </div>
             <?php
+            wp_reset_query();
             return ob_get_clean();
         }
     }

@@ -14,8 +14,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 4em;
   color: white;
+}
+.box-bg-image.podcast-home-intro {
+  padding: 4em;
   min-height: 60vh !important;
 }
 .box-bg-image .intro-title {
@@ -139,6 +141,49 @@
 }
 .ox-card__caption__podcast-link:hover .ox-card__caption__podcast-title {
   color: #58C9CD;
+}
+
+.social-section {
+  text-align: center;
+  padding: 4em 0;
+}
+.social-section__title {
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+}
+.social-section__subtitle {
+  margin: 0;
+}
+.social-section__buttons {
+  margin-top: 2em;
+  background-color: #58C9CD;
+  padding: 2em;
+}
+.social-section__buttons__list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.social-section__buttons__list li {
+  margin: 1em 2em;
+}
+.social-section__buttons__list__btn {
+  color: white;
+  transition: all 0.3s;
+}
+.social-section__buttons__list__btn:hover {
+  text-decoration: none;
+}
+.social-section__buttons__list__btn i {
+  font-size: 4em;
+}
+.social-section__buttons__list .name-social {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
