@@ -29,17 +29,16 @@ if (!function_exists('ox_carousel_podcast_func')) {
                     <div class="item-slick">
                         <figure class="ox-card">
                             <div class="ox-card__body">
-                                <span class="ox-card__body__date"><i class="far fa-clock"></i> <?php the_date(); ?></span>
+                                <span class="ox-card__body__date"><i class="far fa-clock"></i> <?php echo get_the_date('F j, Y'); ?></span>
                                 <?php if(get_the_post_thumbnail()): 
                                    the_post_thumbnail( "medium", array('class'=>'ox-card__body__image') );
-                                ?>
-                                    
+                                ?> 
                                 <?php else: ?>
                                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sample-podcast.jpg" alt="" class="ox-card__body__image">
                                 <?php endif; ?>
-                                <button class="ox-card__body__button-play">
+                                <a href="<?php the_permalink(); ?>" class="ox-card__body__button-play">
                                     <i class="fas fa-play"></i>
-                                </button>
+                                </a>
                             </div>
                             
                             <figcaption class="ox-card__caption">
