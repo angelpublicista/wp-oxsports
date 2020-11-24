@@ -145,3 +145,60 @@
                     font-size: 4em
             .name-social
                 display: block
+
+// SERIES SECTION
+#series-section
+    background-color: $bg-primary
+
+.ox-grid
+    display: grid
+    width: 100%
+    height: 600px
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    margin: 2em 0
+    grid-gap: 20px
+    &__item
+        overflow: hidden
+        border-radius: 10px
+        position: relative
+        grid-column: span 1
+        grid-row: span 1
+        font-size: 7pt
+        &:first-child
+            font-size: 12pt
+            grid-column: span 2
+            grid-row: span 2
+        &__link
+            display: block
+            height: 100%
+            &__title
+                position: absolute
+                top: 30px
+                left: 30px
+                font-size: 5em
+                color: white
+                z-index: 3
+                text-transform: uppercase
+                transition: all .3s
+            &__seasons
+                position: absolute
+                bottom: 2em
+                left: 0
+                padding: .2em 30px
+                color: white
+                background-color: $primary-color
+                font-size: 2em
+                z-index: 3
+            &__image
+                width: 100%
+                height: 100%
+                object-fit: cover
+                z-index: 0
+                position: relative
+                transition: all .3s
+        &:hover
+            .ox-grid__item__link__title
+                color: $primary-color
+            .ox-grid__item__link__image
+                transform: scale(1.2)

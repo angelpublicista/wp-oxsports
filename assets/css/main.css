@@ -1,3 +1,22 @@
+.ox-layer__dark {
+  position: relative;
+}
+.ox-layer__dark::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.ox-text-center {
+  text-align: center;
+}
+
 .page-template-podcast-home #tm-main {
   padding: 0;
 }
@@ -184,6 +203,71 @@
 }
 .social-section__buttons__list .name-social {
   display: block;
+}
+
+#series-section {
+  background-color: #E9FDFF;
+}
+
+.ox-grid {
+  display: grid;
+  width: 100%;
+  height: 600px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 2em 0;
+  grid-gap: 20px;
+}
+.ox-grid__item {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  grid-column: span 1;
+  grid-row: span 1;
+  font-size: 7pt;
+}
+.ox-grid__item:first-child {
+  font-size: 12pt;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.ox-grid__item__link {
+  display: block;
+  height: 100%;
+}
+.ox-grid__item__link__title {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 5em;
+  color: white;
+  z-index: 3;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.ox-grid__item__link__seasons {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  padding: 0.2em 30px;
+  color: white;
+  background-color: #58C9CD;
+  font-size: 2em;
+  z-index: 3;
+}
+.ox-grid__item__link__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+  transition: all 0.3s;
+}
+.ox-grid__item:hover .ox-grid__item__link__title {
+  color: #58C9CD;
+}
+.ox-grid__item:hover .ox-grid__item__link__image {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=main.css.map */

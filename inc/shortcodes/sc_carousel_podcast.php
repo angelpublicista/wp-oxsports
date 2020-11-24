@@ -5,7 +5,7 @@ if (!function_exists('ox_carousel_podcast_func')) {
         $atts = shortcode_atts(
             array(
                 "post_type" => "podcast",
-                "post_per_page" => 12
+                "post_per_page" => 6
             ), 
             $atts,
             "ox_carousel_podcast" 
@@ -23,8 +23,12 @@ if (!function_exists('ox_carousel_podcast_func')) {
                         $serie_name = $series[0]->name;
                         $serie_link = get_term_link( $serie_name, 'serie_podcast');
 
-                        $seasons = get_the_terms( $post->ID, 'temporada_podcast' );
-                        $season_name = $seasons[0]->name;
+                        $season = $series[1];
+                        if($season){
+                            $season_name = $season->name;
+                        } else {
+                            $season_name = "Sin temporadas";
+                        }
                     ?>
                     <div class="item-slick">
                         <figure class="ox-card">

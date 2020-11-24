@@ -53,6 +53,17 @@ get_header();
             </ul>
         </div>
     </section>
+    <section class="podcast-section" id="series-section">
+        <div class="container">
+            <div class="podcast-section__title">
+                <h3 class="text">SERIES</h3>
+                <hr class="title-line first-line">
+                <hr class="title-line last-line">
+            </div>
+
+            <?php echo do_shortcode( '[ox_grid_series]' ); ?>
+        </div>
+    </section>
 </article>
 <?php
 get_footer();
