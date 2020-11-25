@@ -9,4 +9,7 @@ jQuery(function ($) {
         prevArrow: '<button type="button" class="slick-custom-arrow slick-custom-prev"><i class="fas fa-chevron-left"></i></button>',
         autoplay: true
     });
+
+    $old_link = $('#more-podcast-section .ox-pagination ul li a').attr('href');
+    $new_link = $('#more-podcast-section .ox-pagination ul li a').attr('href', $old_link + "#more-podcast-section");
 });

@@ -74,7 +74,10 @@ get_header();
                         <hr class="title-line first-line">
                         <hr class="title-line last-line">
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quidem. Atque debitis vel ipsum quas non totam nihil, doloribus libero perferendis qui quo placeat! Nihil optio natus cupiditate illum harum?</p>
+                    
+                    <div class="ox-grid-podcast ox-flex">
+                        <?php echo do_shortcode( '[ox_grid_podcast]' ); ?>
+                    </div>
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <?php get_sidebar( 'podcast' ); ?>

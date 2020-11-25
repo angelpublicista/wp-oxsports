@@ -19,16 +19,7 @@ if (!function_exists('ox_carousel_podcast_func')) {
             <div class="slick-theme slick-podcast">
                 <?php while($carousel_query->have_posts()): $carousel_query->the_post();?>
                     <?php 
-                        $series = get_the_terms( $post->ID, 'serie_podcast' );
-                        $serie_name = $series[0]->name;
-                        $serie_link = get_term_link( $serie_name, 'serie_podcast');
-
-                        $season = $series[1];
-                        if($season){
-                            $season_name = $season->name;
-                        } else {
-                            $season_name = "Sin temporadas";
-                        }
+                        $serie_info = ox_info_series();
                     ?>
                     <div class="item-slick">
                         <figure class="ox-card">
@@ -46,7 +37,7 @@ if (!function_exists('ox_carousel_podcast_func')) {
                             </div>
                             
                             <figcaption class="ox-card__caption">
-                                <a href="<?php echo $serie_link; ?>" class="ox-card__caption__serie__link"><span class="ox-card__caption__serie__name"><i class="fas fa-tv"></i> <?php echo $serie_name; ?> - <strong><?php echo $season_name; ?></strong></span></a>
+                                <a href="<?php echo $serie_info['link_serie']; ?>" class="ox-card__caption__serie__link"><span class="ox-card__caption__serie__name"><i class="fas fa-tv"></i> <?php echo $serie_info['name_serie']; ?> - <strong><?php echo $serie_info['name_season']; ?></strong></span></a>
                                 <a href="<?php the_permalink(); ?>" class="ox-card__caption__podcast-link"><h3 class="ox-card__caption__podcast-title"><?php the_title(); ?></h3></a>
                             </figcaption>
                         </figure>

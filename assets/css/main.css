@@ -270,6 +270,36 @@
   transform: scale(1.2);
 }
 
+.ox-grid-podcast__card {
+  padding: 2em;
+  border: 1px solid #DEDEDE;
+  margin: 1em 0;
+  border-radius: 5px;
+}
+.ox-grid-podcast__card__title {
+  color: #4D4D4D;
+  margin: 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+.ox-grid-podcast__card__serie__link {
+  color: #959595;
+  margin: 0.5em 0;
+  display: block;
+}
+
+.ox-pagination {
+  padding: 1em;
+  background: #E9FDFF;
+}
+.ox-pagination nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+
 .widget-podcast .uk-card {
   margin-bottom: 1em;
   border-radius: 5px;
