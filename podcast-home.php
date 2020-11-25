@@ -64,6 +64,24 @@ get_header();
             <?php echo do_shortcode( '[ox_grid_series]' ); ?>
         </div>
     </section>
+
+    <section class="podcast-section" id="more-podcast-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <div class="podcast-section__title">
+                        <h3 class="text">MÁS PODCAST</h3>
+                        <hr class="title-line first-line">
+                        <hr class="title-line last-line">
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quidem. Atque debitis vel ipsum quas non totam nihil, doloribus libero perferendis qui quo placeat! Nihil optio natus cupiditate illum harum?</p>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <?php get_sidebar( 'podcast' ); ?>
+                </div>
+            </div>
+        </div>
+    </section>
 </article>
 <?php
 get_footer();
