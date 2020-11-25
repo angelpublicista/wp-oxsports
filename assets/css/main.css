@@ -270,4 +270,45 @@
   transform: scale(1.2);
 }
 
+.widget-podcast .uk-card {
+  margin-bottom: 1em;
+  border-radius: 5px;
+  color: #4D4D4D;
+}
+.widget-podcast .uk-card-title {
+  color: #4D4D4D !important;
+}
+.widget-podcast .uk-card .cat-item a {
+  color: #4D4D4D;
+  transition: all 0.3s;
+}
+.widget-podcast .uk-card .cat-item a:hover {
+  color: #58C9CD;
+  text-decoration: none;
+}
+.widget-podcast .uk-search {
+  width: 100%;
+}
+.widget-podcast .widget-search {
+  margin-bottom: 1em;
+}
+.widget-podcast .widget-newsletter {
+  background-color: #58C9CD;
+  color: white;
+  border: none;
+}
+.widget-podcast .widget-newsletter .uk-card-title {
+  color: white !important;
+}
+.widget-podcast .widget-newsletter .wpcf7-text {
+  width: 100%;
+  border: none;
+  padding: 1em 0.5em;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+}
+.widget-podcast .widget-newsletter .wpcf7-acceptance .wpcf7-list-item {
+  margin: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

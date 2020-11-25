@@ -48,3 +48,5 @@ require_once "inc/custom-taxonomies/tax_serie_podcast.php";
 //SHORTCODES
 require_once "inc/shortcodes/sc_carousel_podcast.php";
 require_once "inc/shortcodes/sc_grid_series.php";
+
+require_once "inc/register-sidebar.php";

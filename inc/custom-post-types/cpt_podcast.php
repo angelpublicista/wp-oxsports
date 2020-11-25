@@ -45,7 +45,7 @@ if ( ! function_exists('wpn_podcast_func') ) {
             'description'           => __( 'Post Type Description', 'master-template-woo' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'author' ),
-            'taxonomies'            => array( 'post_tag' ),
+            'taxonomies'            => array( 'post_tag', 'category' ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
