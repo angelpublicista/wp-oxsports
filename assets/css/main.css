@@ -17,6 +17,18 @@
   text-align: center;
 }
 
+.ox-podcast-main {
+  padding: 2em 0;
+}
+
+.ox-podcast-content {
+  padding: 2em;
+}
+
+.text-primary {
+  color: #58C9CD;
+}
+
 .page-template-podcast-home #tm-main {
   padding: 0;
 }
@@ -292,12 +304,20 @@
   padding: 1em;
   background: #E9FDFF;
 }
+.ox-pagination nav h2 {
+  display: none;
+}
 .ox-pagination nav ul {
   margin: 0;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
   padding: 0;
+}
+.ox-pagination nav.post-navigation .nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .widget-podcast .uk-card {
@@ -339,6 +359,81 @@
 }
 .widget-podcast .widget-newsletter .wpcf7-acceptance .wpcf7-list-item {
   margin: 0;
+}
+
+.single-podcast .tm-main {
+  background-color: white;
+  padding: 0;
+}
+.single-podcast .tm-main .uk-container {
+  max-width: 100%;
+  padding: 0;
+}
+.single-podcast .breadcrumbs-podcast {
+  margin: 2em 0;
+}
+
+.podcast-single-intro {
+  background-color: #58C9CD;
+  padding: 4em 0;
+  color: white;
+}
+.podcast-single-intro .brand-name {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.podcast-single-intro .intro-title {
+  margin: 0;
+  margin-top: 5px;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.ox-info-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 1em 0;
+  font-size: 1.5em;
+  color: #4D4D4D;
+}
+
+.ox-share-section {
+  text-align: center;
+  padding: 2em 0;
+  margin: 2em 0;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+}
+.ox-share-section h5 {
+  margin: 0;
+}
+.ox-share-section__nav {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.ox-share-section__nav__item {
+  margin: 0 1em;
+}
+.ox-share-section__nav__item a {
+  transition: all 0.3s;
+  font-size: 1.5em;
+}
+
+.ox-fb-comments {
+  margin: 2em 0;
+}
+
+.ox-releated-podcast {
+  padding: 1em 2em;
 }
 
 /*# sourceMappingURL=main.css.map */

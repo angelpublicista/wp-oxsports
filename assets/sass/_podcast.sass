@@ -223,9 +223,16 @@
     padding: 1em
     background: $bg-primary
     nav
+        h2
+            display: none
         ul
             margin: 0
             list-style: none
             display: flex
             flex-flow: row wrap
             padding: 0
+        &.post-navigation
+            .nav-links
+                display: flex
+                flex-flow: row wrap
+                justify-content: space-between

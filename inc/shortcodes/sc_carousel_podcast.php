@@ -2,21 +2,47 @@
 
 if (!function_exists('ox_carousel_podcast_func')) {
     function ox_carousel_podcast_func($atts){
+        
         $atts = shortcode_atts(
             array(
                 "post_type" => "podcast",
-                "post_per_page" => 6
+                "post_per_page" => 6,
+                "category__in"  => "",
+                "show_in_carousel" => 4
             ), 
             $atts,
             "ox_carousel_podcast" 
         );
 
-        $carousel_query = new WP_Query($atts);
+        $cats = $atts['category__in'];
+        $arr_cats = false;
+        $exclude_post = false;
+
+        // Releated podcast
+        if($cats){
+            $arr_cats = explode(",", $cats);
+            $exclude_post = array(get_the_ID());
+        } 
+
+        // args to query
+        $args = array(
+            "post_type" => $atts['post_type'],
+            "post_per_page" => $atts['post_per_page'],
+            "category__in"  => $arr_cats,
+            'post__not_in'  => $exclude_post
+        );
+
+        $data_slick = [
+            'slidesToShow' => $atts['show_in_carousel']
+        ];
+
+        $json_data_slick = json_encode($data_slick);
+        $carousel_query = new WP_Query($args);
 
         if($carousel_query->have_posts()){
             ob_start();
             ?>
-            <div class="slick-theme slick-podcast">
+            <div class="slick-theme slick-podcast" data-slick=<?php echo $json_data_slick; ?>>
                 <?php while($carousel_query->have_posts()): $carousel_query->the_post();?>
                     <?php 
                         $serie_info = ox_info_series();
