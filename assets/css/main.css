@@ -273,6 +273,18 @@
 .widget-podcast .uk-card {
   margin-bottom: 1em;
   border-radius: 5px;
+  color: #4D4D4D;
+}
+.widget-podcast .uk-card-title {
+  color: #4D4D4D !important;
+}
+.widget-podcast .uk-card .cat-item a {
+  color: #4D4D4D;
+  transition: all 0.3s;
+}
+.widget-podcast .uk-card .cat-item a:hover {
+  color: #58C9CD;
+  text-decoration: none;
 }
 .widget-podcast .uk-search {
   width: 100%;
@@ -286,7 +298,7 @@
   border: none;
 }
 .widget-podcast .widget-newsletter .uk-card-title {
-  color: white;
+  color: white !important;
 }
 .widget-podcast .widget-newsletter .wpcf7-text {
   width: 100%;
