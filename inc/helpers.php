@@ -34,3 +34,11 @@ function pagination_custom(){
         'total' => $wp_query->max_num_pages
     ));
 }
+
+//Titulos archive
+add_filter( 'get_the_archive_title', function ($title) {    
+    if ( is_tax() ) {    
+        $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+    }
+    return $title;    
+});

@@ -8,7 +8,8 @@ if (!function_exists('ox_carousel_podcast_func')) {
                 "post_type" => "podcast",
                 "post_per_page" => 6,
                 "category__in"  => "",
-                "show_in_carousel" => 4
+                "show_in_carousel" => 4,
+                "tax_query" => false
             ), 
             $atts,
             "ox_carousel_podcast" 
@@ -22,15 +23,35 @@ if (!function_exists('ox_carousel_podcast_func')) {
         if($cats){
             $arr_cats = explode(",", $cats);
             $exclude_post = array(get_the_ID());
-        } 
+        }
 
-        // args to query
-        $args = array(
-            "post_type" => $atts['post_type'],
-            "post_per_page" => $atts['post_per_page'],
-            "category__in"  => $arr_cats,
-            'post__not_in'  => $exclude_post
-        );
+        if($atts['tax_query']){
+            // args to query
+            $args = array(
+                "post_type" => $atts['post_type'],
+                "post_per_page" => $atts['post_per_page'],
+                "category__in"  => $arr_cats,
+                'post__not_in'  => $exclude_post,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'serie_podcast',
+                        'field'    => 'term_id',
+                        'terms'    => $atts['tax_query']
+                    ),
+                ),
+            );
+
+        } else {
+            // args to query
+            $args = array(
+                "post_type" => $atts['post_type'],
+                "post_per_page" => $atts['post_per_page'],
+                "category__in"  => $arr_cats,
+                'post__not_in'  => $exclude_post
+            );
+        }
+
+        
 
         $data_slick = [
             'slidesToShow' => $atts['show_in_carousel']

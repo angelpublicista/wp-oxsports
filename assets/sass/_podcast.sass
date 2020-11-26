@@ -36,7 +36,7 @@
             &.last-line
                 width: 50px
 
-.slick-podcast
+.slick-podcast, .ox-more-series
     margin: 2em 0
     .slick-custom-arrow
         position: absolute
@@ -201,6 +201,48 @@
             .ox-grid__item__link__title
                 color: $primary-color
             .ox-grid__item__link__image
+                transform: scale(1.2)
+
+// MORE SERIES SECTION
+.ox-more-series
+    &__item
+        overflow: hidden
+        border-radius: 10px
+        position: relative
+        font-size: 7pt
+        margin: 1em
+        &__link
+            display: block
+            height: 100%
+            &__title
+                position: absolute
+                top: 30px
+                left: 20px
+                font-size: 5em
+                color: white
+                z-index: 3
+                text-transform: uppercase
+                transition: all .3s
+            &__seasons
+                position: absolute
+                bottom: 2em
+                left: 0
+                padding: .2em 20px
+                color: white
+                background-color: $primary-color
+                font-size: 2em
+                z-index: 3
+            &__image
+                width: 100%
+                height: 300px
+                object-fit: cover
+                z-index: 0
+                position: relative
+                transition: all .3s
+        &:hover
+            .ox-more-series__item__link__title
+                color: $primary-color
+            .ox-more-series__item__link__image
                 transform: scale(1.2)
 
 //MORE PODCAST SECTION

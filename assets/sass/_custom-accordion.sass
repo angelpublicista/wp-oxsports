@@ -1,0 +1,41 @@
+.accordionjs
+    border: none !important
+    margin: 2em 0 !important
+    .acc_section
+        border: none !important
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.23) 
+        box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.23)
+        margin-bottom: .5em
+        padding: 1em
+        color: $body-color
+        .acc_head
+            font-size: 3em
+            border: none !important
+            display: flex !important
+            flex-flow: row wrap !important
+            justify-content: space-between !important
+            align-items: center !important
+            i
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                color: white !important
+                background-color: $body-color
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                font-size: .3em
+                transition: all .3s
+                transform: rotate(0deg)
+        &.acc_active
+            border: none !important
+            .acc_head
+                background: none !important
+                color: $primary-color
+                i
+                    background-color: $primary-color
+                    transform: rotate(180deg)
+.accordion-season
+    .ox-grid-podcast__card__title
+        margin-bottom: 1em

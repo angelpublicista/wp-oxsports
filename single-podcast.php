@@ -8,7 +8,7 @@ $serie_info = ox_info_series();
         <div class="row middle-xs center-xs">
             <div class="col-12">
                 <span class="brand-name">Oxsports nutrition</span>
-                <h1 class="intro-title">TITULO DEL PODCAST</h1>
+                <h1 class="intro-title"><?php the_title(); ?></h1>
             </div>
         </div>
     </div>
