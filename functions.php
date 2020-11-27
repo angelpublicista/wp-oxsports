@@ -56,5 +56,6 @@ require_once "inc/shortcodes/sc_grid_series.php";
 require_once "inc/shortcodes/sc_grid_podcast.php";
 require_once "inc/shortcodes/sc_grid_seasons.php";
 require_once "inc/shortcodes/sc_carousel_more_series.php";
+require_once "inc/shortcodes/sc_grid_archive_series.php";
 
 require_once "inc/register-sidebar.php";

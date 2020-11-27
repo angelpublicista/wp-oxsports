@@ -15,7 +15,7 @@ jQuery(function ($) {
 
     $(".accordion-js").accordionjs();
 
-    $('.ox-more-series').slick({
+    $('.slick-more-series').slick({
         slidesToShow: 4,
         arrows: true,
         nextArrow: '<button type="button" class="slick-custom-arrow slick-custom-next"><i class="fas fa-chevron-right"></i></button>',

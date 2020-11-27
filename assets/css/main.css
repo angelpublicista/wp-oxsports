@@ -331,6 +331,21 @@
 .ox-more-series__item:hover .ox-more-series__item__link__image {
   transform: scale(1.2);
 }
+.ox-more-series.ox-all-series .ox-more-series__item {
+  height: 450px;
+  font-size: 10pt;
+}
+.ox-more-series.ox-all-series .ox-more-series__item__link__image {
+  height: 100%;
+}
+
+.page-template-all_series .ox-podcast-main {
+  padding-top: 0;
+}
+
+.ox-all-series-section {
+  padding-top: 0;
+}
 
 .ox-grid-podcast__card {
   padding: 2em;
@@ -411,15 +426,15 @@
   margin: 0;
 }
 
-.single-podcast .tm-main, .tax-serie_podcast .tm-main {
+.single-podcast .tm-main, .tax-serie_podcast .tm-main, .page-template-all_series .tm-main {
   background-color: white;
   padding: 0;
 }
-.single-podcast .tm-main .uk-container, .tax-serie_podcast .tm-main .uk-container {
+.single-podcast .tm-main .uk-container, .tax-serie_podcast .tm-main .uk-container, .page-template-all_series .tm-main .uk-container {
   max-width: 100%;
   padding: 0;
 }
-.single-podcast .breadcrumbs-podcast, .tax-serie_podcast .breadcrumbs-podcast {
+.single-podcast .breadcrumbs-podcast, .tax-serie_podcast .breadcrumbs-podcast, .page-template-all_series .breadcrumbs-podcast {
   margin: 2em 0;
 }
 

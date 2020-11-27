@@ -1,21 +1,19 @@
 <?php
 
-if(!function_exists('ox_carousel_more_series_func')){
-    function ox_carousel_more_series_func($atts){
-        $exlude_serie = get_queried_object()->term_id;
+if(!function_exists('ox_grid_arch_series_func')){
+    function ox_grid_arch_series_func($atts){
         $series = get_terms(array(
             'taxonomy' => 'serie_podcast',
             'orderby'  => 'date',
-            'order'    => 'DESC',
-            'post__not_in'  => $exlude_serie
+            'order'    => 'DESC'
         ));
         ob_start();
         ?>
 
-        <div class="ox-more-series slick-theme slick-more-series">
+        <div class="ox-more-series ox-all-series row">
             <?php 
                 $counter = 0;
-                $limit_series = 8;
+                $limit_series = 12;
             ?>
             <?php foreach ($series as $serie): ?>
                 <?php 
@@ -33,7 +31,7 @@ if(!function_exists('ox_carousel_more_series_func')){
                     }
 
                     // Descarta taxonomias de temporadas
-                    if($serie->parent > 0 || $serie->term_id == $exlude_serie ){
+                    if($serie->parent > 0 ){
                         $counter = $counter - 1;
                         continue;
                     }
@@ -52,12 +50,14 @@ if(!function_exists('ox_carousel_more_series_func')){
                    }
                   
                 ?>
-                <div class="ox-more-series__item">
-                    <a href="<?php echo get_term_link($serie->term_id, 'serie_podcast'); ?>" class="ox-more-series__item__link ox-layer__dark">
-                        <h3 class="ox-more-series__item__link__title"><?php echo $serie->name; ?></h3>
-                        <img src="<?php echo $image_serie; ?>" alt="" class="ox-more-series__item__link__image">
-                        <span class="ox-more-series__item__link__seasons"><?php echo $number_seasons; ?></span>
-                    </a>
+                <div class="col-xs-12 col-md-4">
+                    <div class="ox-more-series__item">
+                        <a href="<?php echo get_term_link($serie->term_id, 'serie_podcast'); ?>" class="ox-more-series__item__link ox-layer__dark">
+                            <h3 class="ox-more-series__item__link__title"><?php echo $serie->name; ?></h3>
+                            <img src="<?php echo $image_serie; ?>" alt="" class="ox-more-series__item__link__image">
+                            <span class="ox-more-series__item__link__seasons"><?php echo $number_seasons; ?></span>
+                        </a>
+                    </div>
                 </div>
                
             <?php endforeach; ?>
@@ -66,5 +66,5 @@ if(!function_exists('ox_carousel_more_series_func')){
         return ob_get_clean();
     }
 
-    add_shortcode( 'ox_carousel_more_series', 'ox_carousel_more_series_func' );
+    add_shortcode( 'ox_grid_arch_series', 'ox_grid_arch_series_func' );
 }
