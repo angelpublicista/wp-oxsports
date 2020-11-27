@@ -552,4 +552,93 @@
   margin-bottom: 1em;
 }
 
+@media screen and (max-width: 480px) {
+  .box-bg-image.podcast-home-intro {
+    padding: 2em;
+    min-height: auto !important;
+  }
+
+  .article-main {
+    padding-top: 0 !important;
+  }
+
+  .breadcrumbs-podcast {
+    padding: 1em;
+    margin: 0 !important;
+  }
+
+  .podcast-section {
+    padding: 2em;
+  }
+
+  .slick-theme .slick-custom-arrow {
+    bottom: -3em;
+  }
+
+  .social-section__buttons {
+    padding: 1em 0;
+  }
+  .social-section__buttons i {
+    font-size: 2em;
+  }
+  .social-section__buttons__list {
+    flex-flow: row nowrap;
+  }
+
+  .ox-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .ox-grid__item {
+    height: 300px;
+    font-size: 7pt !important;
+  }
+  .ox-grid-podcast__card {
+    padding: 1em;
+  }
+
+  .ox-pagination {
+    margin-bottom: 2em;
+  }
+
+  .podcast-single-intro {
+    padding: 1em 2em;
+  }
+  .podcast-single-intro .intro-title {
+    font-size: 2.5em;
+  }
+
+  .ox-info-bar {
+    font-size: 12pt;
+    padding: 2em;
+  }
+
+  .ox-podcast-main {
+    padding-top: 0;
+  }
+  .ox-podcast-main .widget-podcast {
+    padding: 2em;
+  }
+
+  .ox-more-series .slick-custom-arrow {
+    bottom: -5em;
+  }
+
+  .ox-all-series-section {
+    padding: 1em;
+  }
+  .ox-all-series-section .ox-all-series {
+    margin: 0;
+  }
+  .ox-all-series-section .ox-all-series .ox-more-series__item {
+    height: 300px;
+    font-size: 7pt;
+  }
+
+  .accordionjs .acc_head {
+    font-size: 2em !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
