@@ -6,6 +6,7 @@ if(!function_exists('ox_grid_podcast_func')){
         $atts = shortcode_atts( array(
             'post_type' => 'podcast',
             'posts_per_page' => 4,
+            'offset'    => 7,
             'paged' => $paged
         ),
         $atts, 
@@ -48,6 +49,11 @@ if(!function_exists('ox_grid_podcast_func')){
             <?php
 
             wp_reset_query();
+        } else {
+            $image_podcast = get_stylesheet_directory_uri() . "/assets/img/podcasts.png";
+            $tag_image = "<div style='text-align:center; margin: 2em 0;'><img src='".$image_podcast."' width='30%' style='margin:1em auto;'><h5>Pronto, más Podcast</h5></div>";
+
+            echo $tag_image;
         }
         return ob_get_clean();
     }
